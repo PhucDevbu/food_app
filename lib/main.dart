@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/categories_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,15 +15,16 @@ class MyApp extends StatelessWidget {
       title: 'Food App',
       theme: ThemeData(
 
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.cyan,
       ),
       home: Scaffold(
-        body: Center(
-          child: Text(
-            'Food App',
-            style: TextStyle(fontSize: 30),
-          ),
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text('Food\s Categories'),
         ),
+        body: SafeArea(
+          child: CategoriesPage(),
+        )
       ),
     );
   }
